@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Employee Dashboard</title>
+</head>
+
+<body
+    style="font-family: Arial, sans-serif; background: linear-gradient(135deg,#6a11cb,#2575fc); margin:0; padding:0; display:flex; justify-content:center; align-items:center; height:100vh;">
+
+    <div
+        style="background:#fff; padding:30px; border-radius:16px; box-shadow:0 8px 20px rgba(0,0,0,0.15); width:350px; text-align:center;">
+        <h2 style="margin-bottom:20px; color:#333;">Login</h2>
+
+        <form action="/login" method="POST">
+            <input type="email" name="email" placeholder="Email" required
+                style="width:100%; padding:12px; margin:10px 0; border-radius:10px; border:1px solid #ddd; font-size:14px; outline:none;">
+            <br>
+            <input type="password" name="password" placeholder="Password" required
+                style="width:100%; padding:12px; margin:10px 0; border-radius:10px; border:1px solid #ddd; font-size:14px; outline:none;">
+            <br>
+            <button type="submit"
+                style="width:100%; padding:12px; margin-top:10px; border:none; border-radius:10px; background:linear-gradient(135deg,#2575fc,#6a11cb); color:white; font-size:16px; font-weight:600; cursor:pointer;">
+                Login
+            </button>
+        </form>
+
+        <p style="margin-top:15px; font-size:14px; color:#555;">
+            Don’t have an account?
+            <a href="/signup" style="color:#2575fc; text-decoration:none; font-weight:bold;">Sign up</a>
+        </p>
+    </div>
+
+</body>
+
+</html>

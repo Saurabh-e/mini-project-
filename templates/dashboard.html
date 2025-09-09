@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Dashboard</title>
+</head>
+
+<body style="margin:0; font-family: Arial, sans-serif; background: #f4f4f9;">
+
+    <!-- Centered Heading -->
+    <h2 style="text-align:center; font-size:28px; margin:20px 0; color:#333;">
+        👨‍💼 Employee Dashboard
+    </h2>
+
+    <!-- Top Buttons (Signup + Logout) -->
+    <div style="width:90%; margin:0 auto 20px auto; display:flex; justify-content:space-between;">
+        <a href="/signup" style="padding:10px 18px; background:linear-gradient(135deg,#28a745,#218838);
+                  color:#fff; text-decoration:none; border-radius:8px; font-weight:bold;">
+            ➕ Signup
+        </a>
+
+        <a href="/logout" style="padding:10px 18px; background:linear-gradient(135deg,#ff416c,#ff4b2b); 
+                  color:#fff; text-decoration:none; border-radius:8px; font-weight:bold;">
+            🚪 Logout
+        </a>
+    </div>
+
+    <!-- Employee Table -->
+    <div style="width:90%; margin:20px auto; background:#fff; padding:20px; border-radius:12px; 
+                box-shadow:0 6px 15px rgba(0,0,0,0.1);">
+        <table style="width:100%; border-collapse:collapse; border-radius:10px; overflow:hidden;">
+            <thead>
+                <tr>
+                    <th style="padding:14px 20px; background:#2575fc; color:white;">ID</th>
+                    <th style="padding:14px 20px; background:#2575fc; color:white;">Name</th>
+                    <th style="padding:14px 20px; background:#2575fc; color:white;">Email</th>
+                    <th style="padding:14px 20px; background:#2575fc; color:white;">Department</th>
+                    <th style="padding:14px 20px; background:#2575fc; color:white;">Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for emp in employees %}
+                <tr style="text-align:center; border-bottom:1px solid #eee;">
+                    <td style="padding:12px;">{{ emp.id }}</td>
+                    <td style="padding:12px;">{{ emp.name }}</td>
+                    <td style="padding:12px;">{{ emp.email }}</td>
+                    <td style="padding:12px;">{{ emp.department }}</td>
+                    <td style="padding:12px;">{{ emp.role }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
