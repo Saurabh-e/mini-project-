@@ -8,7 +8,7 @@ app.secret_key = "your_secret_key"
 # Database connection
 db = mysql.connector.connect(
     host="localhost",
-    user="root",        # change if different
+    user="root",
     password="saurabh@121",  # change
     database="employee_db"
 )
